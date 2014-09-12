@@ -8,25 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.nomorehideandseek.MainActivity$PlaceholderFragment" >
 
-    <Button
-        android:id="@+id/scanParkSpot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="@string/scan" />
-
-    <Button
-        android:id="@+id/scanCurrentLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/scanParkSpot"
-        android:layout_alignRight="@+id/scanParkSpot"
-        android:layout_centerVertical="true"
-        android:enabled="false"
-        android:text="@string/ScanLocation" />
-
     <TextView
         android:id="@+id/ParkLocationText"
         android:layout_width="wrap_content"
@@ -36,5 +17,24 @@
         android:layout_marginTop="33dp"
         android:text="@string/NoLocation"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/scanCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scanParkSpot"
+        android:layout_below="@+id/scanParkSpot"
+        android:layout_marginTop="105dp"
+        android:enabled="false"
+        android:text="@string/ScanLocation" />
+
+    <Button
+        android:id="@+id/scanParkSpot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ParkLocationText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp"
+        android:text="@string/scan" />
 
 </RelativeLayout>

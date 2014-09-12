@@ -1010,6 +1010,7 @@ containing a value of this type.
         public static final int share_via_barcode=0x7f020059;
     }
     public static final class id {
+        public static final int ParkLocationText=0x7f0a0058;
         public static final int action_bar=0x7f0a0023;
         public static final int action_bar_activity_content=0x7f0a001c;
         public static final int action_bar_container=0x7f0a0022;
@@ -1021,7 +1022,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f0a001d;
         public static final int action_menu_presenter=0x7f0a001e;
         public static final int action_mode_close_button=0x7f0a002b;
-        public static final int action_settings=0x7f0a006a;
+        public static final int action_settings=0x7f0a006d;
         public static final int activity_chooser_view_content=0x7f0a002c;
         public static final int always=0x7f0a0012;
         public static final int app_picker_list_item_icon=0x7f0a0044;
@@ -1047,9 +1048,9 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f0a002d;
         public static final int expanded_menu=0x7f0a0033;
         public static final int format_text_view=0x7f0a004c;
-        public static final int help_contents=0x7f0a0056;
-        public static final int history_detail=0x7f0a0058;
-        public static final int history_title=0x7f0a0057;
+        public static final int help_contents=0x7f0a0059;
+        public static final int history_detail=0x7f0a005b;
+        public static final int history_title=0x7f0a005a;
         public static final int home=0x7f0a001b;
         public static final int homeAsUp=0x7f0a000c;
         public static final int icon=0x7f0a0031;
@@ -1059,32 +1060,34 @@ containing a value of this type.
         public static final int launch_product_query=0x7f0a0003;
         public static final int listMode=0x7f0a0008;
         public static final int list_item=0x7f0a0030;
-        public static final int menu_encode=0x7f0a0067;
-        public static final int menu_help=0x7f0a0066;
-        public static final int menu_history=0x7f0a0064;
-        public static final int menu_history_clear_text=0x7f0a0069;
-        public static final int menu_history_send=0x7f0a0068;
-        public static final int menu_settings=0x7f0a0065;
-        public static final int menu_share=0x7f0a0063;
+        public static final int menu_encode=0x7f0a006a;
+        public static final int menu_help=0x7f0a0069;
+        public static final int menu_history=0x7f0a0067;
+        public static final int menu_history_clear_text=0x7f0a006c;
+        public static final int menu_history_send=0x7f0a006b;
+        public static final int menu_settings=0x7f0a0068;
+        public static final int menu_share=0x7f0a0066;
         public static final int meta_text_view=0x7f0a0050;
         public static final int meta_text_view_label=0x7f0a004f;
         public static final int middle=0x7f0a0019;
         public static final int never=0x7f0a0010;
         public static final int none=0x7f0a0017;
         public static final int normal=0x7f0a0007;
-        public static final int page_number_view=0x7f0a005c;
+        public static final int page_number_view=0x7f0a005f;
         public static final int preview_view=0x7f0a0048;
         public static final int progress_circular=0x7f0a001f;
         public static final int progress_horizontal=0x7f0a0020;
-        public static final int query_button=0x7f0a005a;
-        public static final int query_text_view=0x7f0a0059;
+        public static final int query_button=0x7f0a005d;
+        public static final int query_text_view=0x7f0a005c;
         public static final int quit=0x7f0a0004;
         public static final int radio=0x7f0a0036;
         public static final int restart_preview=0x7f0a0005;
         public static final int result_button_view=0x7f0a0053;
-        public static final int result_list_view=0x7f0a005b;
+        public static final int result_list_view=0x7f0a005e;
         public static final int result_view=0x7f0a004a;
         public static final int return_scan_result=0x7f0a0006;
+        public static final int scanCurrentLocation=0x7f0a0057;
+        public static final int scanParkSpot=0x7f0a0056;
         public static final int search_badge=0x7f0a0039;
         public static final int search_bar=0x7f0a0038;
         public static final int search_button=0x7f0a003a;
@@ -1095,16 +1098,16 @@ containing a value of this type.
         public static final int search_plate=0x7f0a003d;
         public static final int search_src_text=0x7f0a003e;
         public static final int search_voice_btn=0x7f0a0042;
-        public static final int share_app_button=0x7f0a005e;
-        public static final int share_bookmark_button=0x7f0a005f;
-        public static final int share_clipboard_button=0x7f0a0061;
-        public static final int share_contact_button=0x7f0a0060;
-        public static final int share_text_view=0x7f0a0062;
+        public static final int share_app_button=0x7f0a0061;
+        public static final int share_bookmark_button=0x7f0a0062;
+        public static final int share_clipboard_button=0x7f0a0064;
+        public static final int share_contact_button=0x7f0a0063;
+        public static final int share_text_view=0x7f0a0065;
         public static final int shortcut=0x7f0a0035;
         public static final int showCustom=0x7f0a000e;
         public static final int showHome=0x7f0a000b;
         public static final int showTitle=0x7f0a000d;
-        public static final int snippet_view=0x7f0a005d;
+        public static final int snippet_view=0x7f0a0060;
         public static final int split_action_bar=0x7f0a0025;
         public static final int status_view=0x7f0a0054;
         public static final int submit_area=0x7f0a0040;
@@ -1191,6 +1194,8 @@ containing a value of this type.
         public static final int beep=0x7f060000;
     }
     public static final class string {
+        public static final int NoLocation=0x7f0b0087;
+        public static final int ScanLocation=0x7f0b0086;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f0b0077;
@@ -1348,6 +1353,7 @@ containing a value of this type.
         public static final int result_uri=0x7f0b0070;
         public static final int result_wifi=0x7f0b0071;
         public static final int sbc_name=0x7f0b0072;
+        public static final int scan=0x7f0b0085;
         public static final int wifi_changing_network=0x7f0b0073;
         public static final int wifi_ssid_label=0x7f0b0074;
         public static final int wifi_type_label=0x7f0b0075;

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">NoMoreHideAndSeek</string>
+    <string name="app_name">No More Hide And Seek</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="scan">Scan Your Park Spot</string>
+    <string name="ScanLocation">Scan Your Location</string>
+    <string name="NoLocation">No Location Saved</string>
 
 </resources>

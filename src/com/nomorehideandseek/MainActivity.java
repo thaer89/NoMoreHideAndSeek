@@ -95,7 +95,9 @@ public class MainActivity extends ActionBarActivity {
 									Location.ordinal(currentLocation.getFloor()),Location.ordinal(userParkLocation.getFloor()
 											),userParkLocation.getSection(),userParkLocation.getRow());
 						}else{
-							
+							msg=String.format("You are in %s  floor, please go down to %s floor,section \"%s\" and row %d",
+									Location.ordinal(currentLocation.getFloor()),Location.ordinal(userParkLocation.getFloor()
+											),userParkLocation.getSection(),userParkLocation.getRow());
 						}
 					}else if(!userParkLocation.section.equals(currentLocation.section))
 					{

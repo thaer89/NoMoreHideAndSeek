@@ -7,5 +7,6 @@
     <string name="scan">Scan Your Park Spot</string>
     <string name="ScanLocation">Scan Your Location</string>
     <string name="NoLocation">No Location Saved</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
 
 </resources>

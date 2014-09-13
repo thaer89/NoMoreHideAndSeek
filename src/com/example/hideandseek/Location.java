@@ -1,4 +1,4 @@
-package com.nomorehideandseek;
+package com.example.hideandseek;
 
 public class Location {
 

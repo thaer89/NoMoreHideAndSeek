@@ -1,4 +1,4 @@
-package com.nomorehideandseek;
+package com.example.hideandseek;
 
 import com.example.nomorehideandseek.R;
 

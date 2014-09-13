@@ -2,6 +2,8 @@ package com.example.hideandseek;
 
 
 
+import java.util.Locale;
+
 import com.example.morehideandseek.R;
 
 import android.support.v7.app.ActionBarActivity;
@@ -10,6 +12,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -49,10 +52,12 @@ public class MainActivity extends ActionBarActivity {
 					Toast toast = Toast.makeText(this, "Park Location Saved",
 							Toast.LENGTH_LONG);
 					mainFragment.getScanCurrentButton().setEnabled(true);
+					mainFragment.getScanParkButton().setEnabled(false);
 					mainFragment.getParklocatintextView().setText(
 							userParkLocation.toString());
 					toast.setGravity(Gravity.TOP, 25, 400);
 					toast.show();
+					
 
 				} else {
 					// Handle successful scan
@@ -80,7 +85,8 @@ public class MainActivity extends ActionBarActivity {
 
 					// 1. Instantiate an AlertDialog.Builder with its
 					// constructor
-					AlertDialog.Builder builder = new AlertDialog.Builder(this);
+					ContextThemeWrapper ctw = new ContextThemeWrapper( this, R.style.AlertDialogCustom );
+					AlertDialog.Builder builder = new AlertDialog.Builder(ctw);
 					builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 				           public void onClick(DialogInterface dialog, int id) {
 				               // User clicked OK button
@@ -93,20 +99,20 @@ public class MainActivity extends ActionBarActivity {
 					if(userParkLocation.floor!=currentLocation.floor)
 					{
 						if(userParkLocation.floor>currentLocation.floor){
-							msg=String.format("You are in %s  floor, please go up to %s floor,section \"%s\" and row %d",
+							msg=String.format(Locale.ENGLISH, "You are in %s  floor, please go up to %s floor,section \"%s\" and row %d",
 									Location.ordinal(currentLocation.getFloor()),Location.ordinal(userParkLocation.getFloor()
 											),userParkLocation.getSection(),userParkLocation.getRow());
 						}else{
-							msg=String.format("You are in %s  floor, please go down to %s floor,section \"%s\" and row %d",
+							msg=String.format(Locale.ENGLISH,"You are in %s  floor, please go down to %s floor,section \"%s\" and row %d",
 									Location.ordinal(currentLocation.getFloor()),Location.ordinal(userParkLocation.getFloor()
 											),userParkLocation.getSection(),userParkLocation.getRow());
 						}
 					}else if(!userParkLocation.section.equals(currentLocation.section))
 					{
-						msg=String.format("You are in \"%s\" section,Please go to section  \"%s\"  and row %d",
+						msg=String.format(Locale.ENGLISH,"You are in \"%s\" section,Please go to section  \"%s\"  and row %d",
 								currentLocation.getSection(),userParkLocation.getSection(),userParkLocation.getRow());
 					}else if(userParkLocation.row!=currentLocation.row){
-						msg=String.format("You are in %d row,Please go to row %d",
+						msg=String.format(Locale.ENGLISH,"You are in %d row,Please go to row %d",
 								currentLocation.getRow(),userParkLocation.getRow());
 					}else{
 						msg=String.format("Your in right location, if you dont find your car its meant its stolen :p");
@@ -171,6 +177,7 @@ public class MainActivity extends ActionBarActivity {
 
 		private Button scanParkButton;
 		private Button scanCurrentButton;
+		private Button resetButton;
 		private TextView parklocatintextView;
 
 		public Button getScanParkButton() {
@@ -197,6 +204,7 @@ public class MainActivity extends ActionBarActivity {
 			scanParkButton = (Button) rootView.findViewById(R.id.scanParkSpot);
 			scanCurrentButton = (Button) rootView
 					.findViewById(R.id.scanCurrentLocation);
+			resetButton=(Button) rootView.findViewById(R.id.resetbutton);
 			parklocatintextView = (TextView) rootView
 					.findViewById(R.id.ParkLocationText);
 			scanParkButton.setOnClickListener(new OnClickListener() {
@@ -206,10 +214,21 @@ public class MainActivity extends ActionBarActivity {
 
 					Intent intent = new Intent(
 							"com.google.zxing.client.android.SCAN");
-					intent.setPackage("com.example.nomorehideandseek");
+					intent.setPackage("com.example.morehideandseek");
 					intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
 					getActivity().startActivityForResult(intent, 0);
 
+				}
+			});
+			resetButton.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+
+					scanParkButton.setEnabled(true);
+					scanCurrentButton.setEnabled(false);
+					parklocatintextView.setText(R.string.NoLocation);
+					
 				}
 			});
 			scanCurrentButton.setOnClickListener(new OnClickListener() {
@@ -219,7 +238,7 @@ public class MainActivity extends ActionBarActivity {
 
 					Intent intent = new Intent(
 							"com.google.zxing.client.android.SCAN");
-					intent.setPackage("com.example.nomorehideandseek");
+					intent.setPackage("com.example.morehideandseek");
 					intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
 					getActivity().startActivityForResult(intent, 1);
 

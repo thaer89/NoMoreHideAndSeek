@@ -1,6 +1,8 @@
 package com.example.hideandseek;
 
-import com.example.nomorehideandseek.R;
+
+
+import com.example.morehideandseek.R;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;

@@ -1,5 +1,9 @@
 package com.example.hideandseek;
 
+
+
+import com.example.morehideandseek.R;
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.app.AlertDialog;

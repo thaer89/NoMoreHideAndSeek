@@ -37,3 +37,6 @@ Icon
 
 libs/android-support-v4.jar
 bin/
+bin
+bin/*
+project.properties

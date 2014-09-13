@@ -52,7 +52,9 @@ public class MainActivity extends ActionBarActivity {
 					Toast toast = Toast.makeText(this, "Park Location Saved",
 							Toast.LENGTH_LONG);
 					mainFragment.getScanCurrentButton().setEnabled(true);
+					mainFragment.getScanCurrentButton().setAlpha(1.0f);
 					mainFragment.getScanParkButton().setEnabled(false);
+					mainFragment.getScanParkButton().setAlpha(0.5f);
 					mainFragment.getParklocatintextView().setText(
 							userParkLocation.toString());
 					toast.setGravity(Gravity.TOP, 25, 400);
@@ -92,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 				               // User clicked OK button
 				           }
 				       });
-					builder.setTitle("Vehicle Directions");
+					builder.setTitle("Vehicle Parking Directions");
 					// 2. Chain together various setter methods to set the
 					// dialog characteristics
 					String msg="";
@@ -226,7 +228,10 @@ public class MainActivity extends ActionBarActivity {
 				public void onClick(View v) {
 
 					scanParkButton.setEnabled(true);
+					getScanParkButton().setAlpha(1.0f);
 					scanCurrentButton.setEnabled(false);
+					getScanCurrentButton().setAlpha(0.5f);
+					
 					parklocatintextView.setText(R.string.NoLocation);
 					
 				}

@@ -57,7 +57,7 @@ public class MainActivity extends ActionBarActivity {
 					mainFragment.getScanParkButton().setAlpha(0.5f);
 					mainFragment.getParklocatintextView().setText(
 							userParkLocation.toString());
-					toast.setGravity(Gravity.TOP, 25, 400);
+					toast.setGravity(Gravity.BOTTOM, 25, 400);
 					toast.show();
 					
 
@@ -73,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
 				// Handle cancel
 				Toast toast = Toast.makeText(this, "Scan was Cancelled!",
 						Toast.LENGTH_LONG);
-				toast.setGravity(Gravity.TOP, 25, 400);
+				toast.setGravity(Gravity.BOTTOM, 25, 400);
 				toast.show();
 
 			}
@@ -137,7 +137,7 @@ public class MainActivity extends ActionBarActivity {
 				// Handle cancel
 				Toast toast = Toast.makeText(this, "Scan was Cancelled!",
 						Toast.LENGTH_LONG);
-				toast.setGravity(Gravity.TOP, 25, 400);
+				toast.setGravity(Gravity.BOTTOM, 25, 400);
 				toast.show();
 
 			}
